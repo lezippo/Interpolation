@@ -1,6 +1,19 @@
 # Interpolation
 Interpolate nodes using Lagrange polynomials and natural cubic splines
 
+1. [Theory](#theory)
+- [Lagrange Polynomials](#lagrange-polynomials)
+- [Natural Cubic Splines](#natural-cubic-splines)
+2. [Comparison](#comparison)
+- [Lagrange Polynomials](#lagrange-polynomials-1)
+- [Natural Cubic Splines](#natural-cubic-splines-1)
+3. [Functions' documentation](#functions-documentation)
+- [cubicspline](#cubicspline)
+- [mylagrange](#mylagrange)
+- [mylagrangew](#mylagrangew)
+
+# Theory
+
 ## Lagrange Polynomials
 
 Lagrange interpolation is a method for constructing a polynomial that passes through a given set of data points (nodes)
