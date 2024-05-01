@@ -50,3 +50,45 @@ Cubic spline interpolation addresses many of the shortcomings of Lagrange polyno
 - **Natural Boundary Conditions**: Cubic splines typically impose natural boundary conditions, which set the second derivative to zero at the endpoints of the interpolation interval. This constraint further promotes smoothness and reduces the likelihood of oscillatory behavior near the boundaries.
 
 Overall, cubic spline interpolation offers a robust and stable approach to data interpolation, particularly when compared to high-degree polynomial interpolation methods like Lagrange polynomials. By prioritizing smoothness and local control, cubic splines provide more accurate and visually appealing representations of the underlying data, making them a preferred choice for many interpolation tasks.
+
+# Functions' documentation
+
+## cubicspline
+
+### Purpose
+Interpolate points `(xdata(i), ydata(i))` (called nodes) with a natural cubic spline.
+
+### Input
+- `xdata`: Vector containing the abscissas of the nodes to interpolate. WARNING: the abscissas of the nodes (elements of xdata) must be in ascending order.
+- `ydata`: Vector containing the ordinates of the nodes to interpolate.
+- `zval`: Vector of abscissas ("intermediate", see example) on which to compute spline values.
+
+### Output
+- `spval`: Spline values.
+
+## mylagrange
+
+### Purpose
+Interpolate points `(xdata(i), ydata(i))` (called nodes) with a polynomial function.
+
+### Input
+- `xdata`: Vector containing the abscissas of the nodes to interpolate. WARNING: the abscissas of the nodes (elements of xdata) must be all distinct.
+- `ydata`: Vector containing the ordinates of the nodes to interpolate.
+- `z`: Vector of "intermediate" abscissas on which to compute the values of the interpolating polynomial. We know the value of the polynomial at the nodes, we compute it at many points BETWEEN the nodes to reconstruct the behavior of the phenomenon.
+
+### Output
+- `f`: Values of the interpolating polynomial at the points in the z vector.
+
+## mylagrangew
+
+### Purpose
+Interpolate points `(xdata(i), ydata(i))` (called nodes) with a polynomial function.
+
+### Input
+- `xdata`: Vector containing the abscissas of the nodes to interpolate. WARNING: the abscissas of the nodes (elements of xdata) must be all distinct.
+- `ydata`: Vector containing the ordinates of the nodes to interpolate.
+- `z`: Vector of "intermediate" abscissas on which to compute the values of the interpolating polynomial. We know the value of the polynomial at the nodes, we compute it at many points BETWEEN the nodes to reconstruct the behavior of the phenomenon.
+
+### Output
+- `f`: Values of the interpolating polynomial at the points in the z vector.
+- `w`: Values of the nodal polynomial at the points in the z vector.
